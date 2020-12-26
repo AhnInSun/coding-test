@@ -4,15 +4,37 @@ public class PrefixSums {
 	
 	public static int[] GenomicRangeQuery(String S, int[] P, int[] Q) {
 		
-		// A,C,G,T는 각각 impact factor 1,2,3,4를 갖음.
-		// S = "CAGCCTA" 
-		// P[0]=2, Q[0]=4인 경우 CAGCCTA 문자열의 2번째 4번째 문자열을 가르킴
-		// 상기 문자열 사이의 impact factor값 중 가작 작은 값을 찾아야 함.
-		// CAGCCTA 의 문자열의 2번째 4번째 GCC의 최소 impact factor는 C의 값 2.
-		// 최소 impact factor 들의 배열을 최종 리턴.
+		/*
+		String S ="CAGCCTA";
+		int[] P = {2,5,0};
+		int[] Q = {4,5,6};
 		
-		int[] rtnArr = {1,2,3};
+		// expected : [2,4,1]
+		int[] rtnArr = PrefixSums.GenomicRangeQuery(S, P, Q);
+		*/
 		
+		int[] rtnArr = new int[P.length];
+		
+		int[] A = new int[S.length()+1];
+		int[] C = new int[S.length()+1];
+		int[] G = new int[S.length()+1];
+
+		for (int i = 0; i < S.length(); i++) {
+			A[i+1] = A[i];
+			C[i+1] = C[i];
+			G[i+1] = G[i];
+			
+			if(S.charAt(i)=='A') A[i+1]++;
+			else if(S.charAt(i)=='C') C[i+1]++;
+			else if(S.charAt(i)=='G') G[i+1]++;
+		}
+		
+		for (int i = 0; i < P.length; i++) {
+			if(A[P[i]] != A[Q[i]+1]) rtnArr[i] = 1;
+			else if(C[P[i]] != C[Q[i]+1]) rtnArr[i] = 2;
+			else if(G[P[i]] != G[Q[i]+1]) rtnArr[i] = 3;
+			else rtnArr[i] = 4;
+		}
 		
 		return rtnArr;
 	}
