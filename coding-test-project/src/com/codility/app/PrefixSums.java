@@ -3,16 +3,7 @@ package com.codility.app;
 public class PrefixSums {
 	
 	public static int[] GenomicRangeQuery(String S, int[] P, int[] Q) {
-		
-		/*
-		String S ="CAGCCTA";
-		int[] P = {2,5,0};
-		int[] Q = {4,5,6};
-		
-		// expected : [2,4,1]
-		int[] rtnArr = PrefixSums.GenomicRangeQuery(S, P, Q);
-		*/
-		
+			
 		int[] rtnArr = new int[P.length];
 		
 		int[] A = new int[S.length()+1];
