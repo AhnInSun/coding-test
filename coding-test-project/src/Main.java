@@ -1,21 +1,11 @@
-import com.codility.app.PrefixSums;
+import kr.codeup.CodeUpArray;
 
 public class Main {
 	public static void main(String[] args) {
-		
-		String S ="CAGCCTA";
-		int[] P = {2,5,0};
-		int[] Q = {4,5,6};
-		
-		// expected : [2,4,1]
-		int[] rtnArr = PrefixSums.GenomicRangeQuery(S, P, Q);
-		
-		for (int i = 0; i < rtnArr.length; i++) {
-			System.out.println(rtnArr[i]);
+		int[] rtn = CodeUpArray.array3_1();
+
+		for (int i = 0; i < rtn.length; i++) {
+			System.out.println(rtn[i]);
 		}
-
-		// PC > 인텔리j에서 수정.
-		// Mac > 인텔리j에서 수정.
-
 	}
 }
