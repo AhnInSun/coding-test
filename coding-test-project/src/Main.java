@@ -16,5 +16,6 @@ public class Main {
 
 		// PC > 인텔리j에서 수정.
 		// Mac > 인텔리j에서 수정.
+
 	}
 }
