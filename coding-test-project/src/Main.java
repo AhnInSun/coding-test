@@ -8,13 +8,13 @@ public class Main {
 		int[] Q = {4,5,6};
 		
 		// expected : [2,4,1]
-		int[] rtnArr = PrefixSums.GenomicRangeQuery(S, P, Q);))))
+		int[] rtnArr = PrefixSums.GenomicRangeQuery(S, P, Q);
 		
 		for (int i = 0; i < rtnArr.length; i++) {
 			System.out.println(rtnArr[i]);
 		}
 
-		// 인텔리j에서 수정.
-
+		// PC > 인텔리j에서 수정.
+		// Mac > 인텔리j에서 수정.
 	}
 }
