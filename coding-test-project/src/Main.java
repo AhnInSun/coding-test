@@ -7,10 +7,13 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		int n = sc.nextInt();
-		int m = sc.nextInt();
+		//int n = sc.nextInt();
+		//int m = sc.nextInt();
 
-		int[][] rtnArr = CodeUpArray.array3_1(n, m);
+		int n = 4;
+		int m = 2;
+
+		int[][] rtnArr = CodeUpArray.array3_4(n, m);
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {

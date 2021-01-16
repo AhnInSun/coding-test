@@ -2,6 +2,71 @@ package kr.codeup;
 
 public class CodeUpArray {
 
+    // 2차원 배열 빗금 채우기 3-4
+    public static int[][] array3_4(int n, int m) {
+
+        int[][] rtnArr = new int[n][m];
+        int cnt = 1;
+
+        /*
+           9 6 3 1
+           11 8 5 2
+           12 10 7 4
+        */
+        /*
+            00 01 02 03
+            10 11 12 13
+            20 21 22 23
+            30 31 32 34
+        */
+
+        for (int i = 0; i < n+m-1; i++) {
+            for (int j = n-1; j >= 0; j--) {
+                for (int k = 0; k < m; k++) {
+                    if (j + (m - 1 - k) == i) {
+                        //System.out.print("i:"+i+", rtnArr["+j+"]["+k+"]=");
+                        //System.out.println(rtnArr[j][k] + " $");
+                        rtnArr[j][k] = cnt++;
+                    }
+                }
+            }
+        }
+
+        return rtnArr;
+    }
+
+
+    // 2차원 배열 빗금 채우기 3-3
+    public static int[][] array3_3(int n, int m) {
+
+        int[][] rtnArr = new int[n][m];
+        int cnt = 1;
+
+        /*
+            00 01
+            10 11
+            20 21
+            30 31
+        */
+
+        for (int i = 0; i < n+m-1 ; i++) {
+            for (int j = 0; j < n; j++) {
+                //제일 오른쪽 열부터 시작한다.
+                for (int k = m-1; k >= 0; k--) {
+                    // 규칙을 찾으면 m-1-k+i를 하면 규칙적인 합이 나온다.
+                    if (j + (m-1-k) == i) {
+                        rtnArr[j][k] = cnt++;
+                       // System.out.println("rtnArr["+j+"]["+k+"]=" + rtnArr[j][k] + " $");
+                    }else{
+                       // System.out.println("rtnArr["+j+"]["+k+"]=" + rtnArr[j][k]);
+                    }
+                }
+            }
+        }
+
+        return rtnArr;
+    }
+
     // 2차원 배열 빗금 채우기 3-2
     public static int[][] array3_2(int n, int m) {
 
