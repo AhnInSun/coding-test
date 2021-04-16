@@ -10,10 +10,10 @@ public class Main {
 		//int n = sc.nextInt();
 		//int m = sc.nextInt();
 
-		int n = 4;
-		int m = 2;
+		int n = 3;
+		int m = 4;
 
-		int[][] rtnArr = CodeUpArray.array3_4(n, m);
+		int[][] rtnArr = CodeUpArray.array3_5(n, m);
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
