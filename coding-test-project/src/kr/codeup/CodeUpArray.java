@@ -2,6 +2,39 @@ package kr.codeup;
 
 public class CodeUpArray {
 
+    // 2차원 배열 빗금 채우기 3-6
+    public static int[][] array3_6(int n, int m) {
+
+        int[][] rtnArr = new int[n][m];
+        int cnt = 1;
+
+        /*
+            12 11 9 6
+            10 8 5 3
+            7 4 2 1
+
+            0 23
+            1 22, 13
+            2 21, 12, 03
+            3 20, 11, 02
+            4 10, 01
+            5 00
+        */
+
+        for (int i = 0; i < n+m-1; i++) {
+            for (int j = n-1; j >= 0; j--) {
+                for (int k = 0; k < m; k++) {
+                    if ((j+k) == (n+m-2-i)) {
+                        rtnArr[j][k] = cnt++;
+                    }
+                }
+            }
+        }
+
+        return rtnArr;
+    }
+
+
     // 2차원 배열 빗금 채우기 3-5
     public static int[][] array3_5(int n, int m) {
 
