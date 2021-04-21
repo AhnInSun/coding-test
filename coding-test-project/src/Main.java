@@ -13,7 +13,7 @@ public class Main {
 		int n = 3;
 		int m = 4;
 
-		int[][] rtnArr = CodeUpArray.array3_6(n, m);
+		int[][] rtnArr = CodeUpArray.array3_7(n, m);
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
