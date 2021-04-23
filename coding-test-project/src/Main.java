@@ -10,8 +10,8 @@ public class Main {
 		//int n = sc.nextInt();
 		//int m = sc.nextInt();
 
-		int n = 3;
-		int m = 4;
+		int n = 99;
+		int m = 99;
 
 		int[][] rtnArr = CodeUpArray.array3_7(n, m);
 
@@ -21,6 +21,5 @@ public class Main {
 			}
 			System.out.println("");
 		}
-
 	}
 }
