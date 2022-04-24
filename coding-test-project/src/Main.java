@@ -1,21 +1,13 @@
-import kr.codeup.CodeUpArray;
-import kr.codeup.CodeUpDynamic;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
-
-import static kr.codeup.CodeUpArray.array3_8;
-import static kr.codeup.CodeUpArray.array4_1;
-import static net.acmicpc.step.IOnSimpleMath.getCat;
 
 public class Main {
 	public static void main(String[] args) {
-
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int m = sc.nextInt();
+		double n = sc.nextInt();
+		double m = sc.nextInt();
+		System.out.println(String.format("%.9f", n/m));
 
-		System.out.println(n*m);
+		// 0.33333333333333333333333333333333
+		// 0.3333333333333333
 	}
 }
