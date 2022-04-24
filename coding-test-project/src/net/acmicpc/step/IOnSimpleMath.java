@@ -1,7 +1,6 @@
 package net.acmicpc.step;
 
 public class IOnSimpleMath {
-
     public static String getCat() {
         /*
 
