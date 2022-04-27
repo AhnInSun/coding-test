@@ -4,6 +4,22 @@ import java.util.Scanner;
 
 public class IOnSimpleMath {
 
+    public static void convertYear(int year) {
+        System.out.println(year - 543);
+    }
+
+    public static void chkId(String id) {
+        System.out.println(id + "??!");
+    }
+
+    public static void printSimpleMath(int a, int b) {
+        System.out.println(a + b);
+        System.out.println(a - b);
+        System.out.println(a * b);
+        System.out.println(a / b);
+        System.out.println(a % b);
+    }
+
     // a / b
     public static void division() {
         Scanner sc = new Scanner(System.in);
