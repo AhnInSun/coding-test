@@ -4,6 +4,31 @@ import java.util.Scanner;
 
 public class IOnSimpleMath {
 
+    public static void printMultiplication() {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+        int n = Integer.parseInt(a);
+        int m = Integer.parseInt(b);
+
+        System.out.println(n*(m%10));
+        System.out.println(n*(m%100/10));
+        System.out.println(n*(m%1000/100));
+        System.out.println(n*m);
+    }
+
+    public static void printMath() {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        System.out.println((a+b)%c);
+        System.out.println(((a%c)+(b%c))%c);
+        System.out.println((a*b)%c);
+        System.out.println(((a%c)*(b%c))%c);
+    }
+
     public static void convertYear(int year) {
         System.out.println(year - 543);
     }
