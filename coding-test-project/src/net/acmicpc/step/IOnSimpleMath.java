@@ -4,6 +4,57 @@ import java.util.Scanner;
 
 public class IOnSimpleMath {
 
+    
+    public static void isLeapYear() {
+        Scanner sc = new Scanner(System.in);
+        int year = sc.nextInt();
+        int isYear = 0;
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0)) {
+            isYear = 1;
+        }
+        System.out.println(isYear);
+    }
+
+    public static void getGrade() {
+        Scanner sc = new Scanner(System.in);
+        int score = sc.nextInt();
+        String grade = "";
+        if(score >= 90)
+            grade = "A";
+        else if(score >= 80)
+            grade = "B";
+        else if(score >= 70)
+            grade = "C";
+        else if(score >= 60)
+            grade = "D";
+        else
+            grade = "F";
+        System.out.println(grade);
+    }
+
+    public static void preAlarm() {
+        Scanner sc = new Scanner(System.in);
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+
+        if (m >= 45) { // 45분보다
+            System.out.println(h + " " + (m - 45));
+        } else if (h == 0) { // 자정인 경우
+            System.out.println(23 + " " + (60 - (45 - m)));
+        } else { // 45분보다 작은 경우
+            System.out.println((h - 1) + " " + (60 - (45 - m)));
+        }
+    }
+
+    public static void compareValues() {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        if(a > b) System.out.println(">");
+        if(a < b) System.out.println("<");
+        if(a == b) System.out.println("==");
+    }
+
     public static void printMultiplication() {
         Scanner sc = new Scanner(System.in);
         String a = sc.nextLine();
