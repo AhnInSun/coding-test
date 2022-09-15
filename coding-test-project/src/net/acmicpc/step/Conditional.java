@@ -25,6 +25,8 @@ public class Conditional {
                 win_money = c * 100;
         }
         System.out.println(win_money);
+
+
     }
 
     public static void getCookingTime() {

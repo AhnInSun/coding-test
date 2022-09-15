@@ -10,7 +10,6 @@ public class Main {
 		
 		int n = sc.nextInt();
 		int m = sc.nextInt();
-		
 		/*
 		    4 5
 		 
