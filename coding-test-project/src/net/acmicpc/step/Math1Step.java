@@ -4,6 +4,24 @@ import java.util.Scanner;
 
 public class Math1Step {
     private static Scanner sc = new Scanner(System.in);
+
+    public static void p2292(){
+        // 1, 7, 19, 37, 61
+        int a = sc.nextInt();
+        int step = 1;
+        int curVal = 1;
+        while (true){
+            System.out.printf(curVal + " ");
+            if(curVal >= a) break;
+            curVal += 6 * step;
+            step++;
+        }
+        System.out.printf("-> " + step);
+        //System.out.print(step);
+    }
+
+
+
     public static void p1712(){
         int a = sc.nextInt(); // 고정비
         int b = sc.nextInt(); // 생산비

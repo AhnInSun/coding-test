@@ -6,6 +6,6 @@ import static net.acmicpc.step.StringStep.*;
 import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
-		p1712();
+		p2292();
 	}
 }
